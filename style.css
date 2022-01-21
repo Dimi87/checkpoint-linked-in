@@ -1,0 +1,53 @@
+/* General Stylings */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+
+
+body {
+    background-color: #eee;
+  }
+  /*--------------------------*/
+
+header {
+    background-color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+  }
+section {
+    display: grid;
+    _grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.picture {
+   border-radius: 50%;
+}
+main {
+    background-color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+  }
+
+article {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
