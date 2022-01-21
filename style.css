@@ -16,7 +16,9 @@ body {
     background-color: #eee;
   }
   /*--------------------------*/
-
+  img {
+    border-radius: 50%;
+}
 header {
     background-color: white;
     padding: 1rem;
