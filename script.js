@@ -2,7 +2,7 @@ let userData = [];
 let pendingCounter = 0;
 
 // Was soll alles mit "data" passieren, 
-//solange das userData-Array kleiner als 8 ist? (z.B. "data" zum Array hinzufügen )
+//solange das userData-Array kleiner als 8 ist? "data" zum Array hinzufügen 
 
 function getUserData() {
     fetch("https://dummy-apis.netlify.app/api/contact-suggestions?count=1")
@@ -32,6 +32,10 @@ function renderUserData() {
         user = user[0];
         const container = document.createElement("div");
 
+        //container.style.border = "solid 1px black"
+        //container.style.border-radius = "5px"
+        container.classList.add("div-css")
+
         const profileImg = document.createElement("img");
         profileImg.src = user.picture;
         //console.log(user.picture)
@@ -40,21 +44,43 @@ function renderUserData() {
         name.innerText = `${user.name.first} ${user.name.last}`;
 
         const btnConnect = document.createElement("button");
+        btnConnect.classList.add("btn-connect")
         btnConnect.innerText = "Connect"
         btnConnect.addEventListener("click", function(e) {
             pendingCounter = pendingCounter + 1;
             //console.log(pendingCounter)
             const pending = document.querySelector("#pending-text");
-            let stringPendingInvitations = pendingCounter + "pending invintations";
+            let stringPendingInvitations = pendingCounter + " pending invintations";
             pending.innerText = stringPendingInvitations;
+            
         }
         
         );
-        //btnConnect.addEventListener("click", pendingCounter);
+        btnConnect.addEventListener("click", pendingCount);
 
         container.append(profileImg, name, btnConnect);
         cards.append(container);
     });
+}
+
+
+
+
+function pendingCount(e) {
+    const button = e.target;
+    const pendingText = document.querySelector("#pending-text");
+
+    if (button.innerText === "Connect") {
+        pendingCounter++;
+        button.innerText = "Pending";
+        pendingText.innerText = `${pendingCounter} pending invitations`;
+        // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
+    } else if (button.innerText === "Pending") {
+        // Was soll passieren, wenn auf den "Pending"-Button geklickt wird?
+        pendingCounter--;
+        button.innerText = "Connect";
+        pendingText.innerText = `${pendingCounter} pending invitations`;
+    }
 }
 
 getUserData();
