@@ -47,7 +47,7 @@ function renderUserData() {
         btnConnect.classList.add("btn-connect")
         btnConnect.innerText = "Connect"
         btnConnect.addEventListener("click", function(e) {
-            pendingCounter = pendingCounter + 1;
+            //pendingCounter = pendingCounter + 1;
             //console.log(pendingCounter)
             const pending = document.querySelector("#pending-text");
             let stringPendingInvitations = pendingCounter + " pending invintations";
@@ -69,10 +69,11 @@ function renderUserData() {
 function pendingCount(e) {
     const button = e.target;
     const pendingText = document.querySelector("#pending-text");
-
+     console.log(button.innerText)
     if (button.innerText === "Connect") {
         pendingCounter++;
         button.innerText = "Pending";
+        console.log(pendingCounter)
         pendingText.innerText = `${pendingCounter} pending invitations`;
         // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
     } else if (button.innerText === "Pending") {
