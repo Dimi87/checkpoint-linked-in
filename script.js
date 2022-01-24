@@ -64,18 +64,18 @@ function renderUserData() {
 }
 
 
-
+getUserData();
 
 function pendingCount(e) {
     const button = e.target;
     const pendingText = document.querySelector("#pending-text");
+    // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
      console.log(button.innerText)
     if (button.innerText === "Connect") {
         pendingCounter++;
         button.innerText = "Pending";
         console.log(pendingCounter)
         pendingText.innerText = `${pendingCounter} pending invitations`;
-        // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
     } else if (button.innerText === "Pending") {
         // Was soll passieren, wenn auf den "Pending"-Button geklickt wird?
         pendingCounter--;
@@ -84,4 +84,3 @@ function pendingCount(e) {
     }
 }
 
-getUserData();

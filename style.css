@@ -22,8 +22,6 @@ body {
 header {
     background-color: white;
     padding: 1rem;
-    position: sticky;
-    top: 0;
     border: 1px solid #ccc;
     border-radius: 1rem;
     padding: 3px;
@@ -41,10 +39,29 @@ header {
     display: inline-block;
     
 }
+#people {
+    display: inline-block;
+
+}
+
+.people-see {
+    display: block;
+}
 .Manage {
-    _display: inline-block;
     float: right;
-    margin-right: 10px;
+    margin-right: 16px;
+    color: rgb(78, 78, 78);
+    font-weight: 550;
+    
+}
+.See-all {
+    float: right;
+    _margin-right: 10px;
+    _margin-top: 1px;
+    color: rgb(78, 78, 78);
+    font-weight: 550;
+    
+
 }
 
 .picture {
