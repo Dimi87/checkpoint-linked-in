@@ -1,23 +1,22 @@
 let userData = [];
 let pendingCounter = 0;
 
-// Was soll alles mit "data" passieren, 
-//solange das userData-Array kleiner als 8 ist? "data" zum Array hinzufügen 
+// Was soll mit "data" passieren, solange das userData-Array kleiner als 8 ist? "data" zum Array hinzufügen//
 
-function getUserData() {
+function ReceiveUserData() {
     fetch("https://dummy-apis.netlify.app/api/contact-suggestions?count=1")
         .then((res) => res.json())
         .then((data) => {
             if (userData.length < 8) {
                 userData.push(data);
                 //console.log(userData);
-                getUserData();
+                ReceiveUserData();
             } else {
                 renderUserData();
             }
         });
 }
-    
+ReceiveUserData();   
 
     /* Eine Methode finden und anwenden, jedes Element aus dem userData-Array 
     im DOM anzuzeigen */
@@ -56,29 +55,26 @@ function renderUserData() {
         }
         
         );
-        btnConnect.addEventListener("click", pendingCount);
+        btnConnect.addEventListener("click", pending);
 
         container.append(profileImg, name, btnConnect);
         cards.append(container);
     });
 }
 
-
-getUserData();
-
-function pendingCount(e) {
+function pending(e) {
     const button = e.target;
     const pendingText = document.querySelector("#pending-text");
     // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
      console.log(button.innerText)
     if (button.innerText === "Connect") {
-        pendingCounter++;
+        pendingCounter = pendingCounter + 1;
         button.innerText = "Pending";
         console.log(pendingCounter)
         pendingText.innerText = `${pendingCounter} pending invitations`;
     } else if (button.innerText === "Pending") {
         // Was soll passieren, wenn auf den "Pending"-Button geklickt wird?
-        pendingCounter--;
+        pendingCounter = pendingCounter - 1;
         button.innerText = "Connect";
         pendingText.innerText = `${pendingCounter} pending invitations`;
     }
