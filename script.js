@@ -33,6 +33,7 @@ function renderUserData() {
 
         //container.style.border = "solid 1px black"
         //container.style.border-radius = "5px"
+
         container.classList.add("div-css")
 
         const profileImg = document.createElement("img");
@@ -53,25 +54,27 @@ function renderUserData() {
             pending.innerText = stringPendingInvitations;
             
         }
-        
         );
         btnConnect.addEventListener("click", pending);
-
-        container.append(profileImg, name, btnConnect);
         cards.append(container);
+        container.append(profileImg, name, btnConnect);
+        
     });
 }
 
 function pending(e) {
+
     const button = e.target;
     const pendingText = document.querySelector("#pending-text");
     // Was soll passieren, wenn auf den "Connect"-Button geklickt wird?
      console.log(button.innerText)
+
     if (button.innerText === "Connect") {
         pendingCounter = pendingCounter + 1;
         button.innerText = "Pending";
         console.log(pendingCounter)
         pendingText.innerText = `${pendingCounter} pending invitations`;
+
     } else if (button.innerText === "Pending") {
         // Was soll passieren, wenn auf den "Pending"-Button geklickt wird?
         pendingCounter = pendingCounter - 1;
