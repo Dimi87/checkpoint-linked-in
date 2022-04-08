@@ -3,108 +3,95 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box
+  box-sizing: border-box;
 }
 html {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
-
-
 
 body {
-    background-color: #eee;
-  }
-  /*--------------------------*/
-  img {
-    border-radius: 50%;
+  background-color: #eee;
+}
+/*--------------------------*/
+img {
+  border-radius: 50%;
 }
 header {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    padding: 3px;
-    padding-left: 15px;
-  }
-#cards {
-    display: grid;
-    _grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
-    
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 3px;
+  padding-left: 15px;
 }
-
+#cards {
+  display: grid;
+  _grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
 #pending-text {
-    display: inline-block;
-    
+  display: inline-block;
 }
 #people {
-    display: inline-block;
-
+  display: inline-block;
 }
 
 .people-see {
-    display: block;
+  display: block;
 }
 .Manage {
-    float: right;
-    margin-right: 16px;
-    color: rgb(78, 78, 78);
-    font-weight: 550;
-    
+  float: right;
+  margin-right: 16px;
+  color: rgb(78, 78, 78);
+  font-weight: 550;
 }
 .See-all {
-    float: right;
-    _margin-right: 10px;
-    _margin-top: 1px;
-    color: rgb(78, 78, 78);
-    font-weight: 550;
-    
-
+  float: right;
+  _margin-right: 10px;
+  _margin-top: 1px;
+  color: rgb(78, 78, 78);
+  font-weight: 550;
 }
 
 .picture {
-   border-radius: 50%;
+  border-radius: 50%;
 }
 
 .div-css {
-    border: solid 1px black;
-    border-radius: 7px;
-    padding: 20px;
-    text-align: center;
-
-    
+  border: solid 1px black;
+  border-radius: 7px;
+  padding: 20px;
+  text-align: center;
 }
 
 .btn-connect {
-    border: solid 1px blue;
-    color: blue;
-    border-radius: 15px;
-    padding: 7px;
-    background-color: white;
-    width: 100%;
-
+  border: solid 1px blue;
+  color: blue;
+  border-radius: 15px;
+  padding: 7px;
+  background-color: white;
+  width: 100%;
 }
 main {
-    background-color: white;
-    padding: 1rem;
-    margin-top: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-  }
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
 
 article {
-    background-color: white;
-    _border-radius: 5px;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+  background-color: white;
+  _border-radius: 5px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
 
-  .box {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-  }
-
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
